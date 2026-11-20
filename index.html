@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VIRALMIND AI — Marketing, Branding &amp; Viral Growth Agency</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark">VM</span>
+        <div>
+          <h1>VIRALMIND AI</h1>
+          <p class="subtitle">Growth Intelligence Agency</p>
+        </div>
+      </div>
+
+      <nav class="nav" id="nav-tabs">
+        <button class="nav-btn active" data-tab="onboarding">Start: What to Grow?</button>
+        <button class="nav-btn" data-tab="virality">Virality Scorer</button>
+        <button class="nav-btn" data-tab="trends">Trend &amp; Competitor Radar</button>
+        <button class="nav-btn" data-tab="content">Content Studio</button>
+        <button class="nav-btn" data-tab="brand">Brand &amp; Design Studio</button>
+        <button class="nav-btn" data-tab="growth">Psychology &amp; Growth</button>
+        <button class="nav-btn" data-tab="analytics">Campaign Analytics</button>
+        <button class="nav-btn" data-tab="integrations">AI Integrations &amp; Settings</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <span class="status-dot" id="api-status-dot"></span>
+        <span id="api-status-text">Checking server...</span>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <!-- Tab 1: Onboarding -->
+      <section class="panel active" id="tab-onboarding">
+        <header class="panel-header">
+          <h2>What are you trying to grow?</h2>
+          <p>Start with your business, product, creator channel, or raw idea. VIRALMIND AI structures the research-first agency workflow.</p>
+        </header>
+        <form class="card form-grid" id="form-onboarding">
+          <label>Growth Goal
+            <input name="goal" required placeholder="e.g., Launch a B2B AI workflow tool to 10k organic signups" />
+          </label>
+          <label>Niche / Industry
+            <input name="niche" required placeholder="e.g., SaaS Productivity" />
+          </label>
+          <label>Target Audience
+            <input name="target_audience" required placeholder="e.g., Solo founders &amp; operations leads" />
+          </label>
+          <label>Stage
+            <select name="stage">
+              <option value="idea">Idea</option>
+              <option value="early" selected>Early Traction</option>
+              <option value="scaling">Scaling</option>
+              <option value="established">Established</option>
+            </select>
+          </label>
+          <button type="submit" class="btn-primary">Build Agency Action Plan</button>
+        </form>
+        <div class="result-box" id="out-onboarding"></div>
+      </section>
+
+      <!-- Tab 2: Virality Scorer -->
+      <section class="panel" id="tab-virality">
+        <header class="panel-header">
+          <h2>Viral Potential Score (0–100)</h2>
+          <p>Evidence-based 11-dimension creative evaluation calibrated against logged campaign outcomes.</p>
+        </header>
+        <form class="card form-grid" id="form-virality">
+          <label>Title or Opening Hook
+            <input name="title_or_hook" required placeholder="e.g., Stop doing cold outreach like 2022 — 3 steps that tripled replies" />
+          </label>
+          <label>Content Concept
+            <textarea name="concept" rows="3" required placeholder="Describe the flow, proof, and payoff..."></textarea>
+          </label>
+          <label>Platform
+            <select name="platform">
+              <option value="instagram_reels">Instagram Reels</option>
+              <option value="youtube_shorts">YouTube Shorts</option>
+              <option value="tiktok">TikTok</option>
+              <option value="linkedin">LinkedIn</option>
+              <option value="x">X (Twitter)</option>
+            </select>
+          </label>
+          <label>Target Audience
+            <input name="target_audience" value="B2B founders" />
+          </label>
+          <label>Niche
+            <input name="niche" value="SaaS growth" />
+          </label>
+          <label>Visual Plan
+            <input name="visual_plan" placeholder="e.g., Screen recording + facecam split-screen" />
+          </label>
+          <button type="submit" class="btn-primary">Score Viral Potential</button>
+        </form>
+        <div class="result-box" id="out-virality"></div>
+      </section>
+
+      <!-- Tab 3: Trend & Competitor Radar -->
+      <section class="panel" id="tab-trends">
+        <header class="panel-header">
+          <h2>Trend Radar &amp; Platform Intelligence</h2>
+          <p>Discover emerging opportunities, buyer complaints, and official platform ranking signals.</p>
+        </header>
+        <form class="card form-grid" id="form-trends">
+          <label>Topic or Keyword
+            <input name="query" required placeholder="e.g., AI video editing workflow" />
+          </label>
+          <label>Niche
+            <input name="niche" value="Creator Economy" />
+          </label>
+          <label>Audience
+            <input name="audience" value="Short-form video creators" />
+          </label>
+          <button type="submit" class="btn-primary">Research Opportunities</button>
+        </form>
+        <div class="result-box" id="out-trends"></div>
+      </section>
+
+      <!-- Tab 4: Content Studio -->
+      <section class="panel" id="tab-content">
+        <header class="panel-header">
+          <h2>AI Content Generation Studio</h2>
+          <p>Convert one seed idea into structured scripts, hooks, captions, visual directions, and a 7-day calendar.</p>
+        </header>
+        <form class="card form-grid" id="form-content">
+          <label>Seed Idea
+            <input name="idea" required placeholder="e.g., How to automate client onboarding in 15 minutes" />
+          </label>
+          <label>Niche
+            <input name="niche" required value="Agency Operations" />
+          </label>
+          <label>Target Audience
+            <input name="target_audience" required value="Freelancers &amp; small agencies" />
+          </label>
+          <label>Number of Ideas (1–100)
+            <input type="number" name="idea_count" min="1" max="100" value="6" />
+          </label>
+          <button type="submit" class="btn-primary">Generate Campaign</button>
+        </form>
+        <div class="result-box" id="out-content"></div>
+      </section>
+
+      <!-- Tab 5: Brand & Design Studio -->
+      <section class="panel" id="tab-brand">
+        <header class="panel-header">
+          <h2>Brand Builder &amp; Creative Design Studio</h2>
+          <p>Generate positioning, naming, color psychology palettes, typography, and platform-exact design briefs.</p>
+        </header>
+        <form class="card form-grid" id="form-brand">
+          <label>Business or Idea
+            <input name="business_or_idea" required placeholder="e.g., LumaMetrics" />
+          </label>
+          <label>Niche
+            <input name="niche" required value="Marketing Analytics" />
+          </label>
+          <label>Target Audience
+            <input name="target_audience" required value="E-commerce brand owners" />
+          </label>
+          <label>Price Positioning
+            <select name="price_positioning">
+              <option value="value">Value / Accessible</option>
+              <option value="mid_premium" selected>Mid-Premium / Editorial</option>
+              <option value="luxury">Luxury / Quiet Precision</option>
+            </select>
+          </label>
+          <button type="submit" class="btn-primary">Build Brand Identity</button>
+        </form>
+        <div class="result-box" id="out-brand"></div>
+      </section>
+
+      <!-- Tab 6: Psychology & Growth -->
+      <section class="panel" id="tab-growth">
+        <header class="panel-header">
+          <h2>Ethical Consumer Psychology &amp; Growth Roadmap</h2>
+          <p>Build a 7-day sprint, 30-day plan, and 90-day roadmap grounded in behavioral science.</p>
+        </header>
+        <form class="card form-grid" id="form-growth">
+          <label>Business Name
+            <input name="business_name" required placeholder="e.g., LumaMetrics" />
+          </label>
+          <label>Niche
+            <input name="niche" required value="Marketing Analytics" />
+          </label>
+          <label>Target Audience
+            <input name="target_audience" required value="DTC founders" />
+          </label>
+          <label>Primary Goal
+            <input name="primary_goal" value="leads_and_organic_reach" />
+          </label>
+          <button type="submit" class="btn-primary">Generate 7/30/90 Roadmap</button>
+        </form>
+        <div class="result-box" id="out-growth"></div>
+      </section>
+
+      <!-- Tab 7: Campaign Analytics -->
+      <section class="panel" id="tab-analytics">
+        <header class="panel-header">
+          <h2>Self-Improving Campaign Analytics</h2>
+          <p>Log real campaign outcomes to calibrate Viral Potential Scores and benchmark winning formats.</p>
+        </header>
+        <form class="card form-grid" id="form-outcome">
+          <label>Campaign Name
+            <input name="campaign_name" required placeholder="e.g., Onboarding Teardown Reel #1" />
+          </label>
+          <label>Platform
+            <input name="platform" required value="instagram_reels" />
+          </label>
+          <label>Content Format
+            <input name="content_format" required value="short_video" />
+          </label>
+          <label>Hook Used
+            <input name="hook_used" required placeholder="Hook text..." />
+          </label>
+          <label>Predicted Score (0–100)
+            <input type="number" name="predicted_score" min="0" max="100" value="72" />
+          </label>
+          <label>Views
+            <input type="number" name="views" min="0" value="12500" />
+          </label>
+          <label>Shares
+            <input type="number" name="shares" min="0" value="310" />
+          </label>
+          <label>Saves
+            <input type="number" name="saves" min="0" value="480" />
+          </label>
+          <label>Avg Watch %
+            <input type="number" name="avg_watch_pct" min="0" max="100" value="68" />
+          </label>
+          <button type="submit" class="btn-primary">Log Outcome &amp; Recalibrate</button>
+        </form>
+        <div class="result-box" id="out-analytics"></div>
+      </section>
+
+      <!-- Tab 8: AI Integrations & Settings -->
+      <section class="panel" id="tab-integrations">
+        <header class="panel-header">
+          <h2>Universal AI Connectors &amp; Provider Settings</h2>
+          <p>Inspect server-side AI provider status, cost tracking, and MCP / ChatGPT / Gemini integration endpoints.</p>
+        </header>
+        <div class="card">
+          <button type="button" class="btn-primary" id="btn-refresh-providers">Refresh Provider Status</button>
+          <div class="result-box" id="out-providers"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
